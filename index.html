@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,600&display=swap" rel="stylesheet">
+    <title>Sunday Mobility</title>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="row g-0 my-5">
+
+            <div class="col-md-6 col-lg-7"><img src="./Img/img.jpg" class="img-fluid h-100" alt=""></div>
+            <div
+                class="col-md-6  col-lg-5 pt-sm-2 pt-md-0 border border-top-1 border-start-0 border-bottom-0 border-end-0 text-center d-flex flex-column justify-content-between flex-grow-1 bg-white">
+                <div class="mt-2">
+                    <h2 class="d-inline-block">Welcome back!</h2><br>
+                    <p class="d-inline-block">Please Login to your account.</p>
+                </div>
+                <form action="" class="login_form">
+                    <div class="mx-1 my-4 m-sm-2 m-md-4">
+                        <input type="text" id="username" class="form-control border-start-0 border-end-0 border-top-0 border-bottom-1"
+                            required placeholder="Username">
+                    </div>
+                    <div class="mx-1 my-4 m-sm-2 m-md-4">
+                        <input type="password" name="" id="pass" placeholder="Password" required
+                            class="form-control border-start-0 border-end-0 border-top-0 border-bottom-1">
+                    </div>
+                    <div class="clearfix mx-1 my-4 m-sm-2 m-md-4">
+                        <div class="d-inline-block float-start ">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                            <label class="form-check-label" for="gridCheck">
+                                Check me out
+                            </label>
+                        </div>
+                        <a class="float-end text-color text-decoration-none">Forgot Password</a>
+                    </div>
+
+                    <div class="d-grid mx-1 my-4 m-sm-2 m-md-4">
+                        <button class="btn btn-color text-white w-100" id="submit" type="submit">Login</button>
+                    </div>
+                </form>
+                <p class="d-inline-block ">Term of use. Privacy Policy</p>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        var sub_btn= document.querySelector('#submit');
+        var username= document.querySelector('#username');
+        var pass= document.querySelector('#pass');
+        var chk=document.querySelector('#gridCheck')
+        sub_btn.onclick=function(e){
+            e.preventDefault();
+            console.log(pass.value);
+            if(username.value!=='' && pass.value!=='' && chk.checked!==false){
+                
+                window.location.href='employee.html'
+            }
+            else{
+                alert('Please fill the form')
+                console.log('not done');
+               
+
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
